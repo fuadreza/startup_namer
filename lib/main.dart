@@ -34,7 +34,7 @@ class _RandomWordsState extends State<RandomWords> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Startup Name Generator'),
+        title: Text('Name Generator'),
         actions: [
           IconButton(icon: Icon(Icons.list), onPressed: _pushSaved)
         ],
@@ -99,9 +99,10 @@ class _RandomWordsState extends State<RandomWords> {
         pair.asPascalCase,
         style: _biggerFont,
       ),
+      contentPadding: const EdgeInsets.all(8),
       trailing: Icon(
         alreadySaved ? Icons.favorite : Icons.favorite_border,
-        color: alreadySaved ? Colors.red : null,
+        color: alreadySaved ? Colors.yellow : null,
       ),
       onTap: () {
         setState(() {
